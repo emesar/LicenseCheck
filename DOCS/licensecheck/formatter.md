@@ -36,10 +36,7 @@ Formats
 [[find in source code]](../../licensecheck/formatter.py#L123)
 
 ```python
-def ansi(
-    packages: list[PackageCompat],
-    heading: typing.Optional[str] = None,
-) -> str:
+def ansi(packages: list[PackageCompat], heading: str | None = None) -> str:
 ```
 
 Format to ansi.
@@ -58,10 +55,7 @@ Format to ansi.
 [[find in source code]](../../licensecheck/formatter.py#L96)
 
 ```python
-def csv(
-    packages: list[PackageCompat],
-    heading: typing.Optional[str] = None,
-) -> str:
+def csv(packages: list[PackageCompat], heading: str | None = None) -> str:
 ```
 
 Format to CSV.
@@ -80,10 +74,7 @@ Format to CSV.
 [[find in source code]](../../licensecheck/formatter.py#L78)
 
 ```python
-def json(
-    packages: list[PackageCompat],
-    heading: typing.Optional[str] = None,
-) -> str:
+def json(packages: list[PackageCompat], heading: str | None = None) -> str:
 ```
 
 Format to Json.
@@ -104,7 +95,7 @@ Format to Json.
 ```python
 def markdown(
     packages: list[PackageCompat],
-    heading: typing.Optional[str] = None,
+    heading: str | None = None,
 ) -> str:
 ```
 

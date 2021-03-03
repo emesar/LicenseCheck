@@ -11,6 +11,7 @@ Output the licenses used by dependencies and check if these are compatible...
         - [\_\_main\_\_](module.md#__main__)
         - [formatter](formatter.md#formatter)
         - [license_matrix](license_matrix.md#license_matrix)
+        - [license_matrix_old](license_matrix_old.md#license_matrix_old)
         - [packagecompat](packagecompat.md#packagecompat)
         - [packageinfo](packageinfo.md#packageinfo)
 
@@ -18,7 +19,7 @@ with the project license
 
 ## cli
 
-[[find in source code]](../../licensecheck/__init__.py#L80)
+[[find in source code]](../../licensecheck/__init__.py#L84)
 
 ```python
 def cli() -> None:
@@ -28,7 +29,7 @@ Cli entry point.
 
 ## getDepsLicenses
 
-[[find in source code]](../../licensecheck/__init__.py#L36)
+[[find in source code]](../../licensecheck/__init__.py#L40)
 
 ```python
 def getDepsLicenses() -> list[PackageCompat]:

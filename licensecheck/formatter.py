@@ -38,7 +38,7 @@ except ModuleNotFoundError:
 
 
 def markdown(packages: list[PackageCompat],
-heading: typing.Optional[str] = None) -> str:
+heading: str | None = None) -> str:
 	"""Format to Markdown.
 
 	Args:
@@ -76,7 +76,7 @@ heading: typing.Optional[str] = None) -> str:
 
 
 def json(packages: list[PackageCompat],
-heading: typing.Optional[str] = None) -> str:
+heading: str | None = None) -> str:
 	"""Format to Json.
 
 	Args:
@@ -94,7 +94,7 @@ heading: typing.Optional[str] = None) -> str:
 
 
 def csv(packages: list[PackageCompat],
-heading: typing.Optional[str] = None) -> str:
+heading: str | None = None) -> str:
 	"""Format to CSV.
 
 	Args:
@@ -121,7 +121,7 @@ heading: typing.Optional[str] = None) -> str:
 
 
 def ansi(packages: list[PackageCompat],
-heading: typing.Optional[str] = None) -> str:
+heading: str | None = None) -> str:
 	"""Format to ansi.
 
 	Args:

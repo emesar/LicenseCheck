@@ -26,8 +26,12 @@ def _doSysExec(command: str) -> tuple[int, str]:
 	Raises:
 		RuntimeWarning: throw a warning should there be a non exit code
 	"""
-	with subprocess.Popen(command, shell=True, stdout=subprocess.PIPE,
-	stderr=subprocess.STDOUT, encoding="utf-8", errors="ignore") as process:
+	with subprocess.Popen(command,
+	shell=True,
+	stdout=subprocess.PIPE,
+	stderr=subprocess.STDOUT,
+	encoding="utf-8",
+	errors="ignore") as process:
 		out = process.communicate()[0]
 		exitCode = process.returncode
 	return exitCode, out
@@ -59,7 +63,7 @@ def getDepsLicenses() -> list[PackageCompat]:
 				poetryInstalled = False # Some error occurred so fallback to requirements.txt
 				break
 	if not poetryInstalled:
-		with open("requirements.txt", 'r') as requirementsTxt:
+		with open("requirements.txt") as requirementsTxt:
 			for req in requirements.parse(requirementsTxt): # type: ignore
 				reqs.append(req.name) # type: ignore
 	# Get my license
@@ -93,8 +97,11 @@ def cli() -> None:
 	filename = stdout if args.file is None else open(args.file, "w")
 	# Format
 	formatMap = {
-	"json": formatter.json, "markdown": formatter.markdown, "csv": formatter.csv,
-	"ansi": formatter.ansi, "simple": formatter.simple}
+	"json": formatter.json,
+	"markdown": formatter.markdown,
+	"csv": formatter.csv,
+	"ansi": formatter.ansi,
+	"simple": formatter.simple}
 	if args.format is not None and args.format not in formatMap:
 		print(FORMAT_HELP)
 		sysexit(2)
